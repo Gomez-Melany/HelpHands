@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+<button onclick="mostrar()">Mostrar contenido</button>  
+
+<p id="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates tenetur voluptas aperiam deserunt, fuga eveniet repellat ratione obcaecati praesentium. Quis!</p>
+
+
+<script>
+document.querySelector('#texto').onmouseover = mouseover
+function mouseover(){
+    let p = document.createElement('p');
+    p.innerText= 'El mouse esta arriba del elemento'
+    document.body.appendChild(p);
+    document.querySelector('#texto').style.backgroundColor='Red'
+    document.querySelector('#texto').style.color ='white'
+}
+document.querySelector('#texto').onmouseleave = mouseleave
+function mouseleave(){
+let p = document.createElement('p');
+p.innerText='El mouse esta afuera del elemento'
+document.body.appendChild(p)
+}
+
+    function mostrar(){
+        let p = document.createElement('p')
+        p.innerText = ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem ullam repellat voluptates minus cupiditate labore aliquid facere cumque maxime tempora.'
+        document.body.appendChild(p)
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>     //EVENTOS\\    </title>
+</head>
+<body>
+ <!-- <button onclick="alert('Boton apretadp')">Apretar</button>
+  <button onclick="contar()">Contar</button>
+  <button onclick="recet()">Recet </button>-->
+ <input type="text" oninput="revertir()">
+ <h2></h2>
+ <hr>
+<script>
+
+function revertir(){
+   let refinput = document.querySelector('input');
+   let texto = refinput.value;
+   console.log(texto);
+   let textoarreglo = texto.split('')
+   console.log(textoarreglo)
+   textoarreglo.reverse()
+   document.querySelector('h2').innerText = textoarreglo.join('');
+}
+
+/*var contador =0;
+ function representarContador(cont){
+document.querySelector('span').innerText = cont;
+    }
+  
+
+    function contar(){
+        contador++;
+        representarContador(contador);
+    }
+    function reset(){
+        contador=0;
+        representarContador(contador);
+    }*/
+
+</script>
+</body>
+</html>

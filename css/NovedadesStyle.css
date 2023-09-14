@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --padding-container: 100px 0;
+    --color-title: #121D40; 
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #121D40;
+}
+
+#novedades{
+        text-align: center; /* Centra el texto horizontalmente */
+        color: blue; /* Cambia el color del texto a azul */
+        font-family: 'Poppins', sans-serif;
+}
+
+/* ---------------NAV--------------- */
+nav{
+    --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav_title{
+    font-weight: 300;
+}
+.nav_items{
+    list-style: none;
+}
+.nav_link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+.nav_links{
+    color: #121D40;
+    text-decoration: none;
+}
+.nav_menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+.nav_close{
+    display: var(--show, none);
+}
+
+.card {
+    margin: 0 10px; /* Margen a los lados de las tarjetas */
+    float: left; /* Posicionar las tarjetas una al lado de la otra */
+    width: calc(33% - 20px); /* Divide en tres columnas con margen */
+    transition: transform 0.3s; /* Transición suave en hover */
+}
+
+/* Efecto de hover */
+.card:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo en hover */
+    transform: translateY(-5px); /* Mueve la tarjeta hacia arriba en hover */
+}
+
+/* Limpieza de floats en el contenedor */
+.card-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
